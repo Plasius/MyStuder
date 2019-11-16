@@ -10,4 +10,27 @@
     <string name="ten">10.</string>
     <string name="eleven">11.</string>
     <string name="twelve">12.</string>
+    <string name="profile">profile:</string>
+    <string name="human">human</string>
+    <string name="real">real</string>
+    <string name="energy">energy</string>
+    <string name="calm">calm</string>
+    <string name="balanced">balanced</string>
+    <string name="turbulent">turbulent</string>
+    <string name="last_average">last average:</string>
+    <string name="nine_eleven">9.11</string>
+    <string name="real_average">real average:</string>
+    <string name="human_average">human average:</string>
+    <string name="hours_slept">sleep time:</string>
+    <string name="sixty_nine">6.9</string>
+    <string name="absences">absences:</string>
+    <string name="seven">7</string>
+    <string name="minutes_school">minutes from school:</string>
+    <string name="one_twenty">120</string>
+    <string name="motivation">motivation:</string>
+    <string name="parent_influence">importance for parents:</string>
+    <string name="days_extra">days with extra activities:</string>
+    <string name="name">name:</string>
+    <string name="Alexander">Alexander</string>
+    <string name="save">save</string>
 </resources>
