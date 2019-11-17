@@ -2,6 +2,7 @@ package com.plasius.mystuder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,6 +12,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.plasius.mystuder.utils.Constants;
+import com.plasius.mystuder.utils.PersistenceUtils;
 import com.plasius.mystuder.utils.User;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -26,7 +28,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         //display adequate welcoming message
-        if(getIntent().getBooleanExtra(Constants.STATE_FIRST_LAUNCHED, true)){
+        if(PersistenceUtils.getInstance(this).getBoolean(Constants.STATE_FIRST_LAUNCHED, true)){
             ((TextView)findViewById(R.id.settings_tv_welcome)).setText(R.string.welcome);
         }else{
             ((TextView)findViewById(R.id.settings_tv_welcome)).setText(R.string.settings);
@@ -114,9 +116,17 @@ public class SettingsActivity extends AppCompatActivity {
                                                             break;
                                                     }
 
-                                                    //save user
+                                                    //save user data
 
+                                                    //go back or alternatively, launch main activity
+                                                    if(getIntent().getBooleanExtra(Constants.STATE_FIRST_LAUNCHED, true)) {
+                                                        PersistenceUtils.getInstance(this).setBoolean(Constants.STATE_FIRST_LAUNCHED, false);
+                                                        Intent intent = new Intent(this, MainActivity.class);
+                                                        startActivity(intent);
 
+                                                    }
+
+                                                    finish();
                                                 }
                                             }
                                         }

@@ -1,18 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:columnCount="1"
+    android:rowCount="4"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:drawableTop="@drawable/ic_launcher_background"
+            android:textAlignment="center"
+            android:text="@string/app_name"
+            android:gravity="center"
+            />
+
+
+        <GridLayout
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+
+            android:rowCount="2"
+            android:columnCount="2">
+
+            <!--Subjects-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+
+                    android:layout_row="0"
+                    android:layout_column="0"
+
+                    android:layout_gravity="fill_horizontal"
+
+
+
+                    android:text="Subjects"
+                    android:textSize="22sp"
+                    android:drawableTop="@mipmap/ic_launcher"
+                    android:textAlignment="center"
+                    android:onClick="onWow"/>
+
+            <!--Schedule-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_row="0"
+                android:layout_column="1"
+
+                android:layout_gravity="fill_horizontal"
+
+
+                android:text="Schedule"
+                android:textSize="22sp"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:textAlignment="center"
+                android:onClick="onWow"/>
+
+            <!--Feelings-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_row="1"
+                android:layout_column="0"
+
+                android:layout_gravity="center_horizontal"
+
+
+                android:text="Feelings"
+                android:textSize="22sp"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:textAlignment="center"
+                android:onClick="onWow"/>
+
+            <!--Research-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_row="1"
+                android:layout_column="1"
+
+                android:layout_gravity="center_horizontal"
+
+
+                android:text="Research"
+                android:textSize="22sp"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:textAlignment="center"
+                android:onClick="onWow"/>
+
+
+        </GridLayout>
+
+</LinearLayout>
