@@ -7,7 +7,7 @@
     android:columnCount="1"
     android:rowCount="4"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
 
 
@@ -52,7 +52,7 @@
                     android:textSize="22sp"
                     android:drawableTop="@mipmap/ic_launcher"
                     android:textAlignment="center"
-                    android:onClick="onWow"/>
+                    android:onClick="onSubjectsClicked"/>
 
             <!--Schedule-->
             <TextView

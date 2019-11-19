@@ -6,14 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.plasius.mystuder.activity.MainActivity;
 import com.plasius.mystuder.utils.Constants;
 import com.plasius.mystuder.utils.PersistenceUtils;
-import com.plasius.mystuder.utils.User;
+import com.plasius.mystuder.model.User;
 
 public class SettingsActivity extends AppCompatActivity {
 
