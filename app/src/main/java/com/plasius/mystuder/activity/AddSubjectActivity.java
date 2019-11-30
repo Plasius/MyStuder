@@ -21,6 +21,7 @@ public class AddSubjectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_subject);
+        getSupportActionBar().setTitle("Add Subject");
 
         //get subjects from db
         //display subjects
@@ -33,8 +34,6 @@ public class AddSubjectActivity extends AppCompatActivity {
 
         //save new subject
         Database.getInstance(this).subjectDAO().insertSubject(new Subject(subjectname, laverage));
-        //DEBUG
-        Database.getInstance(this).gradeDAO().insertGrade(new Grade(subjectname, Calendar.getInstance().getTimeInMillis(), 9));
 
         //go back
         Toast.makeText(this, "Subject added", Toast.LENGTH_SHORT).show();

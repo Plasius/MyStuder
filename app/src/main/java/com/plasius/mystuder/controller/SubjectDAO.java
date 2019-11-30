@@ -20,4 +20,6 @@ public interface SubjectDAO {
     void deleteSubject(Subject subject);
     @Update
     void updateSubject(Subject subject);
+    @Query("DELETE FROM subjects")
+    void deleteSubjects();
 }
