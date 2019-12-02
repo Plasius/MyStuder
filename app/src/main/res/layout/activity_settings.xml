@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".SettingsActivity"
+    tools:context=".activity.SettingsActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -155,43 +155,6 @@
         </RadioGroup>
     </LinearLayout>
 
-    <!-- energy -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        >
-        <TextView
-            android:text="@string/energy"
-            android:textSize="22sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <RadioGroup
-            android:id="@+id/settings_rg_energy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <RadioButton
-                android:id="@+id/settings_rb_calm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="@string/calm"/>
-            <RadioButton
-                android:id="@+id/settings_rb_balanced"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="@string/balanced"/>
-            <RadioButton
-                android:id="@+id/settings_rb_turbulent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="@string/turbulent"/>
-        </RadioGroup>
-    </LinearLayout>
 
     <!-- last average -->
     <LinearLayout
@@ -217,73 +180,25 @@
 
     </LinearLayout>
 
-    <!-- human average -->
+    <!-- current goal -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
         >
         <TextView
-            android:text="@string/human_average"
+            android:text="@string/current_goal"
             android:textSize="22sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:id="@+id/settings_et_haverage"
+            android:id="@+id/settings_et_goal"
             android:hint="@string/nine_eleven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:maxLength="4"
-            android:textSize="22sp"
-            android:importantForAutofill="no" />
-
-    </LinearLayout>
-
-    <!-- real average -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        >
-        <TextView
-            android:text="@string/real_average"
-            android:textSize="22sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/settings_et_raverage"
-            android:hint="@string/nine_eleven"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:maxLength="4"
-            android:textSize="22sp"
-            android:importantForAutofill="no" />
-
-    </LinearLayout>
-
-    <!-- hours slept -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        >
-        <TextView
-            android:text="@string/hours_slept"
-            android:textSize="22sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/settings_et_sleeptime"
-            android:hint="@string/sixty_nine"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:maxLength="3"
             android:textSize="22sp"
             android:importantForAutofill="no" />
 
@@ -313,31 +228,8 @@
 
     </LinearLayout>
 
-    <!-- minutes from school -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        >
-        <TextView
-            android:text="@string/minutes_school"
-            android:textSize="22sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/settings_et_distance"
-            android:hint="@string/one_twenty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:maxLength="3"
-            android:textSize="22sp"
-            android:importantForAutofill="no" />
-
-    </LinearLayout>
-
-    <!-- motivation level -->
+    <!--study time-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -345,31 +237,44 @@
         android:orientation="vertical"
         >
         <TextView
-            android:text="@string/motivation"
+            android:text="@string/study_time"
             android:textSize="22sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
 
         <SeekBar
-            android:id="@+id/settings_sb_motivation"
+            android:id="@+id/settings_sb_studytime"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:progress="2"
             android:max="4"/>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="max 1 hour"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="max 4 hours"/>
+        </RelativeLayout>
+
     </LinearLayout>
 
-    <!-- parent importance -->
+    <!-- importance level -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:orientation="vertical"
-
         >
         <TextView
-            android:text="@string/parent_influence"
+            android:text="@string/importance"
             android:textSize="22sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -381,6 +286,20 @@
             android:layout_height="wrap_content"
             android:progress="2"
             android:max="4"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="non-important"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="important"/>
+        </RelativeLayout>
 
     </LinearLayout>
 
@@ -406,9 +325,23 @@
             android:progress="2"
             android:max="4"/>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 extra per week"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7 extras per week"/>
+        </RelativeLayout>
+
     </LinearLayout>
 
-    <!--save butotn-->
+    <!--save button-->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

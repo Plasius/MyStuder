@@ -1,7 +1,6 @@
-package com.plasius.mystuder.controller;
+package com.plasius.mystuder.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -11,8 +10,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.plasius.mystuder.R;
-import com.plasius.mystuder.model.Grade;
+import com.plasius.mystuder.database.Grade;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class GradeAdapter extends ArrayAdapter<Grade> {
@@ -48,7 +49,7 @@ public class GradeAdapter extends ArrayAdapter<Grade> {
         // Bind that data efficiently!
         holder.tv_grade.setText(Integer.toString(grades.get(position).getValue()));
         holder.tv_subject.setText(grades.get(position).getSubject_id());
-        holder.tv_date.setText(Long.toString(grades.get(position).getDate()));
+        holder.tv_date.setText( new SimpleDateFormat("dd/MM/yyyy").format(new Date(grades.get(position).getDate())));
 
         return convertView;
     }

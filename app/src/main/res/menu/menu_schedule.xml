@@ -3,15 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context=".activity.ScheduleActivity">
     <item
-        android:id="@+id/action_add_subject"
+        android:id="@+id/action_add_class"
         android:orderInCategory="1"
-        android:title="Add subject"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_add_grade"
-        android:orderInCategory="2"
-        android:title="Add grade"
+        android:title="Add class"
         app:showAsAction="never" />
 </menu>

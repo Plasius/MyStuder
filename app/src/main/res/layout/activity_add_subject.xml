@@ -27,6 +27,21 @@
         android:hint="last year's average"
         />
 
+    <EditText
+        android:id="@+id/subject_et_goal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        android:textSize="22sp"
+        android:hint="this year's goal"
+        />
+    <CheckBox
+        android:id="@+id/subject_cb_real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Real subject"/>
+
     <Button
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"

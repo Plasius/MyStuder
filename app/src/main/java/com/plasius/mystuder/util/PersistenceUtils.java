@@ -1,10 +1,11 @@
-package com.plasius.mystuder.utils;
+package com.plasius.mystuder.util;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.plasius.mystuder.R;
+import com.google.gson.Gson;
+import com.plasius.mystuder.database.User;
 
 public class PersistenceUtils {
     private SharedPreferences preferences;
@@ -27,5 +28,15 @@ public class PersistenceUtils {
 
     public void setBoolean(String key, boolean value){
         preferences.edit().putBoolean(key, value).commit();
+    }
+
+    public void saveUser(User user){
+        String json = user == null ? null : new Gson().toJson(user);
+        preferences.edit().putString("user", json).apply();
+    }
+
+    public User getUser(){
+        String json = preferences.getString("user", null);
+        return json == null ? null : new Gson().fromJson(json, User.class);
     }
 }

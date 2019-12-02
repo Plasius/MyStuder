@@ -34,4 +34,19 @@
     <string name="Alexander">Alexander</string>
     <string name="save">save</string>
     <string name="choose_category">Select a subject</string>
+    <string name="delete_subject">Delete subject</string>
+    <string name="delete_grades">Delete grades</string>
+    <string name="current_goal">this year\'s goal</string>
+    <string name="importance">importance:</string>
+    <string name="study_time">study time:</string>
+    <string name="delete_classes">delete classes</string>
+    <string name="choose_day">Choose day</string>
+
+    <string-array name="days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
 </resources>

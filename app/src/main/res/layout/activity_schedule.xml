@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ScheduleActivity">
+
+
+    <Spinner
+        android:id="@+id/schedule_sp_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:spinnerMode="dialog"
+        android:entries="@array/days"
+        android:prompt="@string/choose_day" />
+
+
+    <ListView
+        android:id="@+id/schedule_lv_classes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        />
+
+
+    <Button
+        android:onClick="onDeleteClassesClicked"
+        android:text="@string/delete_classes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

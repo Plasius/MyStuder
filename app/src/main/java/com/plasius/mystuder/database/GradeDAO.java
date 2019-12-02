@@ -1,12 +1,10 @@
-package com.plasius.mystuder.controller;
+package com.plasius.mystuder.database;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-
-import com.plasius.mystuder.model.Grade;
 
 import java.util.List;
 
@@ -25,5 +23,8 @@ public interface GradeDAO {
     void deleteGrades();
     @Update
     void updateGrade(Grade grade);
+
+    @Query("DELETE from grades WHERE grades.subject_id = :subject_id")
+    void deleteGradesBySubject(String subject_id);
 
 }

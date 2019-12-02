@@ -1,7 +1,6 @@
-package com.plasius.mystuder.controller;
+package com.plasius.mystuder.database;
 
 import android.content.Context;
-import android.provider.ContactsContract;
 
 import androidx.annotation.NonNull;
 import androidx.room.DatabaseConfiguration;
@@ -10,10 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
-import com.plasius.mystuder.model.Grade;
-import com.plasius.mystuder.model.Subject;
-
-@androidx.room.Database(entities = {Subject.class, Grade.class}, exportSchema = false, version = 2)
+@androidx.room.Database(entities = {Subject.class, Grade.class, Class.class}, exportSchema = false, version = 4)
 public abstract class Database extends RoomDatabase {
     private static final String DB_NAME = "db";
     private static Database instance;
@@ -27,6 +23,7 @@ public abstract class Database extends RoomDatabase {
 
     public abstract SubjectDAO subjectDAO();
     public abstract GradeDAO gradeDAO();
+    public abstract ClassDAO classDAO();
 
     @NonNull
     @Override

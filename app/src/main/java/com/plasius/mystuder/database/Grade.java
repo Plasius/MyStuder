@@ -1,8 +1,6 @@
-package com.plasius.mystuder.model;
+package com.plasius.mystuder.database;
 
 import androidx.room.*;
-
-import java.util.Date;
 
 @Entity(tableName = "grades")
 public class Grade {
