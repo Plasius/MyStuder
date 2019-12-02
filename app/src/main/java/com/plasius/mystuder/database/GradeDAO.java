@@ -11,9 +11,9 @@ import java.util.List;
 @Dao
 public interface GradeDAO {
 
-    @Query("SELECT * from grades")
+    @Query("SELECT * from grades ORDER BY grades.date ASC")
     List<Grade> getGrades();
-    @Query("SELECT * FROM grades WHERE grades.subject_id = :subjectId")
+    @Query("SELECT * FROM grades WHERE grades.subject_id = :subjectId ORDER BY grades.date ASC")
     List<Grade> getGradesBySubject(String subjectId);
     @Insert
     void insertGrade(Grade grade);

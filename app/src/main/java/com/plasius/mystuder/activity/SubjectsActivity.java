@@ -3,7 +3,9 @@ package com.plasius.mystuder.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Rect;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +16,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jjoe64.graphview.DefaultLabelFormatter;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 import com.plasius.mystuder.R;
 import com.plasius.mystuder.database.Database;
 import com.plasius.mystuder.adapter.GradeAdapter;
@@ -22,7 +28,9 @@ import com.plasius.mystuder.database.Subject;
 import com.plasius.mystuder.database.User;
 import com.plasius.mystuder.util.PersistenceUtils;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SubjectsActivity extends AppCompatActivity {
@@ -61,6 +69,24 @@ public class SubjectsActivity extends AppCompatActivity {
             ((TextView) findViewById(R.id.subject_tv_laverage)).setText(Double.toString(Database.getInstance(this).subjectDAO().getSubjectById(Id).getLastAverage()));
             ((TextView) findViewById(R.id.subject_tv_gaverage)).setText(Double.toString(Database.getInstance(this).subjectDAO().getSubjectById(Id).getGoalAverage()));
         }
+
+
+        //graph
+
+        DataPoint[] dataPoints = new DataPoint[grades.size()];
+        int index = 0;
+
+        for(Grade grade : grades){
+            dataPoints[index] = new DataPoint(index+1, grade.getValue());
+            index++;
+        }
+
+        //load graph
+        LineGraphSeries <DataPoint> series = new LineGraphSeries<>(dataPoints);
+
+
+        GraphView graph = findViewById(R.id.graph);
+        graph.addSeries(series);
 
     }
 
