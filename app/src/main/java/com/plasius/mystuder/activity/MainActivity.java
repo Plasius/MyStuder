@@ -57,4 +57,8 @@ public class MainActivity extends AppCompatActivity {
     public void onScheduleClicked(View v){
         startActivity(new Intent(this, ScheduleActivity.class));
     }
+
+    public void onProfileClicked(View v){
+        startActivity(new Intent(this, ProfileActivity.class));
+    }
 }

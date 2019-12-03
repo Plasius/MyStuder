@@ -81,27 +81,13 @@
 
                 android:layout_gravity="center_horizontal"
 
+                android:onClick="onProfileClicked"
 
-                android:text="Feelings"
+                android:text="Profile"
                 android:textSize="22sp"
                 android:drawableTop="@mipmap/ic_launcher"
                 android:textAlignment="center"/>
 
-            <!--Research-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_row="1"
-                android:layout_column="1"
-
-                android:layout_gravity="center_horizontal"
-
-
-                android:text="Research"
-                android:textSize="22sp"
-                android:drawableTop="@mipmap/ic_launcher"
-                android:textAlignment="center"/>
 
 
         </GridLayout>

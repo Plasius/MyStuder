@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".activity.ProfileActivity">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--Average-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Current average:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:text="0"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/profile_tv_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/profile_tv_average_detail"
+        android:text="@string/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="22sp"/>
+
+
+    <!--Absences-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Absences:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:id="@+id/profile_tv_absences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginLeft="15dp"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/profile_tv_absences_detail"
+        android:text="@string/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="22sp"/>
+
+    <!--Days with extra activities-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Days with extra activities:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:id="@+id/profile_tv_extra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginLeft="15dp"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/profile_tv_extra_detail"
+        android:text="@string/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="22sp"/>
+
+
+    <!--Motivation and importance-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Motivation and importance:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:id="@+id/profile_tv_importance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginLeft="15dp"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/profile_tv_importance_detail"
+        android:text="@string/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="22sp"/>
+
+
+    <!--Time spent studying-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Time spent studying:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:id="@+id/profile_tv_studytime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_marginLeft="15dp"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/profile_tv_studytime_detail"
+        android:text="@string/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="22sp"/>
+
+</LinearLayout>
+</ScrollView>

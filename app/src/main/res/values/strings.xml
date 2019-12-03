@@ -41,6 +41,7 @@
     <string name="study_time">study time:</string>
     <string name="delete_classes">delete classes</string>
     <string name="choose_day">Choose day</string>
+    <string name="loading">Loading</string>
 
     <string-array name="days">
         <item>Monday</item>
@@ -48,5 +49,11 @@
         <item>Wednesday</item>
         <item>Thursday</item>
         <item>Friday</item>
+    </string-array>
+
+    <string-array name="evaluations">
+        <item>Uhoh… Your values are under the average, you should strive to get results of around: </item>
+        <item>Doing OK! Your values are on the same level as of your peers, that being: </item>
+        <item>Excelling! You are above the level of the average student considering these numbers, who are only around: </item>
     </string-array>
 </resources>
