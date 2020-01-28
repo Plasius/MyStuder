@@ -9,6 +9,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.plasius.mystuder.R;
@@ -30,6 +31,26 @@ public class AddClassActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Add class");
         setContentView(R.layout.activity_add_class);
+
+        TextView textView = findViewById(R.id.class_tv_tracker);
+        ((SeekBar)findViewById(R.id.class_sb_order)).setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                textView.setText(Integer.toString(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
         initSpinners();
     }
 
@@ -40,17 +61,17 @@ public class AddClassActivity extends AppCompatActivity {
 
     //pick day, pick subject, pick order
     public void onAddClicked(View v){
-        String subjectName = ((Spinner)findViewById(R.id.class_sp_subjects)).getSelectedItem().toString();
+        String subjectName = ((Spinner)findViewById(R.id.class_sp_subjects))
+                .getSelectedItem().toString();
         if(subjectName.isEmpty())
             return;
 
         String dayName = ((Spinner)findViewById(R.id.class_sp_days)).getSelectedItem().toString();
         int order = ((SeekBar)findViewById(R.id.class_sb_order)).getProgress();
 
-
-
         //save new grade
-        Database.getInstance(this).classDAO().insertClass(new com.plasius.mystuder.database.Class(subjectName, dayName, order));
+        Database.getInstance(this).classDAO().insertClass(
+                new com.plasius.mystuder.database.Class(subjectName, dayName, order));
 
         //go back
         Toast.makeText(this, "Class added", Toast.LENGTH_SHORT).show();

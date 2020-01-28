@@ -24,7 +24,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:text="@string/last_average"
+            android:text="@string/average"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -39,7 +39,7 @@
 
 
         <TextView
-            android:text="@string/current_goal"
+            android:text="@string/goal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"

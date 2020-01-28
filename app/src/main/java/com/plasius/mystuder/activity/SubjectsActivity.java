@@ -36,6 +36,7 @@ import java.util.List;
 public class SubjectsActivity extends AppCompatActivity {
 
     private Spinner spinner;
+    private GraphView graph;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,33 +60,39 @@ public class SubjectsActivity extends AppCompatActivity {
         GradeAdapter adapter=new GradeAdapter(this, grades);
         ((ListView)findViewById(R.id.subject_lv_grades)).setAdapter(adapter);
 
-        if(Id.contentEquals("all subjects")){
-            User user = PersistenceUtils.getInstance(this).getUser();
-            if(user != null) {
-                ((TextView) findViewById(R.id.subject_tv_laverage)).setText(Double.toString(user.getLastAverage()));
-                ((TextView) findViewById(R.id.subject_tv_gaverage)).setText(Double.toString(user.getGoalAverage()));
-            }
-        }else {
-            ((TextView) findViewById(R.id.subject_tv_laverage)).setText(Double.toString(Database.getInstance(this).subjectDAO().getSubjectById(Id).getLastAverage()));
-            ((TextView) findViewById(R.id.subject_tv_gaverage)).setText(Double.toString(Database.getInstance(this).subjectDAO().getSubjectById(Id).getGoalAverage()));
-        }
-
 
         //graph
+        double average = 0;
 
         DataPoint[] dataPoints = new DataPoint[grades.size()];
         int index = 0;
 
         for(Grade grade : grades){
             dataPoints[index] = new DataPoint(index+1, grade.getValue());
+            average += grade.getValue();
             index++;
+        }
+
+        if(grades.size()!=0)
+            average/=grades.size();
+
+        if(Id.contentEquals("all subjects")){
+            User user = PersistenceUtils.getInstance(this).getUser();
+            if(user != null) {
+                ((TextView) findViewById(R.id.subject_tv_laverage)).setText(String.format("%.2f", average));
+                ((TextView) findViewById(R.id.subject_tv_gaverage)).setText(String.format("%.2f", user.getGoal()));
+            }
+        }else {
+            ((TextView) findViewById(R.id.subject_tv_laverage)).setText(String.format("%.2f", average));
+            ((TextView) findViewById(R.id.subject_tv_gaverage)).setText(String.format("%.2f", Database.getInstance(this).subjectDAO().getSubjectById(Id).getGoalAverage()));
         }
 
         //load graph
         LineGraphSeries <DataPoint> series = new LineGraphSeries<>(dataPoints);
 
 
-        GraphView graph = findViewById(R.id.graph);
+        graph = findViewById(R.id.graph);
+        graph.removeAllSeries();
         graph.addSeries(series);
 
     }
@@ -182,7 +189,11 @@ public class SubjectsActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         initSpinner();
-        if(spinner.isSelected())
+
+        if(spinner.isSelected()){
             loadSubject(spinner.getSelectedItem().toString());
+            if(graph != null)
+             graph.removeAllSeries();
+        }
     }
 }

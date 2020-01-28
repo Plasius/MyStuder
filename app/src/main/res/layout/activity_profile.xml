@@ -18,13 +18,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:text="Current average:"
+            android:text="Last average:"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="22sp"
             />
         <TextView
+
             android:text="0"
             android:layout_marginLeft="15dp"
             android:id="@+id/profile_tv_average"
@@ -40,6 +41,63 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:textSize="22sp"/>
+
+    <!--Current goal-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Current goal:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:text="0"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/profile_tv_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/profile_tv_goal_detail"
+        android:text="@string/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="22sp"/>
+
+    <!--Current average-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Current average:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            />
+        <TextView
+            android:text="0"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/profile_tv_caverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/profile_tv_caverage_detail"
+        android:text="@string/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:textSize="22sp"/>
+
 
 
     <!--Absences-->
@@ -99,34 +157,6 @@
         android:textSize="22sp"/>
 
 
-    <!--Motivation and importance-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:text="Motivation and importance:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="22sp"
-            />
-        <TextView
-            android:id="@+id/profile_tv_importance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:layout_marginLeft="15dp"
-            android:textSize="22sp"/>
-
-    </LinearLayout>
-    <TextView
-        android:id="@+id/profile_tv_importance_detail"
-        android:text="@string/loading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:textSize="22sp"/>
-
 
     <!--Time spent studying-->
     <LinearLayout
@@ -155,6 +185,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:textSize="22sp"/>
+
+
 
 </LinearLayout>
 </ScrollView>

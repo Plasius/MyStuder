@@ -8,8 +8,11 @@ public class User implements Parcelable {
     private int gender;
     private int grade;
     private int profile;
-    private double lastAverage;
-    private double goalAverage;
+
+    private double laverage;
+
+    private double goal;
+
     private int absences;
     private int importance;
     private int extraDays;
@@ -18,6 +21,23 @@ public class User implements Parcelable {
 
     public User(String name){
         this.name = name;
+    }
+
+
+    public void setGoal(double goal) {
+        this.goal = goal;
+    }
+
+    public void setLaverage(double laverage) {
+        this.laverage = laverage;
+    }
+
+    public double getLaverage() {
+        return laverage;
+    }
+
+    public double getGoal() {
+        return goal;
     }
 
     public void setStudyTime(int studyTime) {
@@ -34,12 +54,6 @@ public class User implements Parcelable {
     }
     public void setName(String name) {
         this.name = name;
-    }
-    public void setLastAverage(double lastAverage) {
-        this.lastAverage = lastAverage;
-    }
-    public void setGoalAverage(double goalAverage) {
-        this.goalAverage = goalAverage;
     }
     public void setAbsences(int absences) {
         this.absences = absences;
@@ -58,8 +72,11 @@ public class User implements Parcelable {
         gender = in.readInt();
         grade = in.readInt();
         profile = in.readInt();
-        lastAverage = in.readDouble();
-        goalAverage = in.readDouble();
+
+        laverage = in.readDouble();
+
+        goal = in.readDouble();
+
         absences = in.readInt();
         importance = in.readInt();
         extraDays = in.readInt();
@@ -87,8 +104,11 @@ public class User implements Parcelable {
         dest.writeInt(gender);
         dest.writeInt(grade);
         dest.writeInt(profile);
-        dest.writeDouble(lastAverage);
-        dest.writeDouble(goalAverage);
+
+        dest.writeDouble(laverage);
+
+        dest.writeDouble(goal);
+
         dest.writeInt(absences);
         dest.writeInt(importance);
         dest.writeInt(extraDays);
@@ -103,13 +123,6 @@ public class User implements Parcelable {
         return gender;
     }
 
-    public double getGoalAverage() {
-        return goalAverage;
-    }
-
-    public double getLastAverage() {
-        return lastAverage;
-    }
 
     public int getGrade() {
         return grade;

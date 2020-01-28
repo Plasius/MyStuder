@@ -141,19 +141,21 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <RadioButton
-                android:id="@+id/settings_rb_human"
+                android:id="@+id/settings_rb_real"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:text="@string/real"/>
             <RadioButton
-                android:id="@+id/settings_rb_real"
+                android:id="@+id/settings_rb_human"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:text="@string/human"/>
         </RadioGroup>
     </LinearLayout>
+
+
 
 
     <!-- last average -->
@@ -163,13 +165,13 @@
         android:padding="15dp"
         >
         <TextView
-            android:text="@string/last_average"
+            android:text="@string/average_last"
             android:textSize="22sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:id="@+id/settings_et_laverage"
+            android:id="@+id/settings_et_last_average"
             android:hint="@string/nine_eleven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -180,6 +182,7 @@
 
     </LinearLayout>
 
+
     <!-- current goal -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -187,13 +190,13 @@
         android:padding="15dp"
         >
         <TextView
-            android:text="@string/current_goal"
+            android:text="@string/average_now"
             android:textSize="22sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <EditText
-            android:id="@+id/settings_et_goal"
+            android:id="@+id/settings_et_goal_average"
             android:hint="@string/nine_eleven"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -201,7 +204,6 @@
             android:maxLength="4"
             android:textSize="22sp"
             android:importantForAutofill="no" />
-
     </LinearLayout>
 
     <!-- absences -->
@@ -236,19 +238,30 @@
         android:padding="15dp"
         android:orientation="vertical"
         >
-        <TextView
-            android:text="@string/study_time"
-            android:textSize="22sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <TextView
+                android:text="@string/study_time"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/settings_tv_tracker_study"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"/>
+
+
+        </LinearLayout>
 
         <SeekBar
             android:id="@+id/settings_sb_studytime"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:progress="2"
-            android:max="4"/>
+            android:max="3"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -256,12 +269,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="max 1 hour"/>
+                android:text="1 hour"/>
             <TextView
                 android:layout_alignParentEnd="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="max 4 hours"/>
+                android:text="3+ hours"/>
         </RelativeLayout>
 
     </LinearLayout>
@@ -273,18 +286,30 @@
         android:padding="15dp"
         android:orientation="vertical"
         >
-        <TextView
-            android:text="@string/importance"
-            android:textSize="22sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/importance"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/settings_tv_tracker_importance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"/>
+
+
+        </LinearLayout>
 
 
         <SeekBar
             android:id="@+id/settings_sb_importance"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:progress="2"
             android:max="4"/>
 
         <RelativeLayout
@@ -308,22 +333,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:orientation="vertical"
+        android:orientation="vertical">
 
-        >
-        <TextView
-            android:text="@string/days_extra"
-            android:textSize="22sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/days_extra"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/settings_tv_tracker_extra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"/>
+        </LinearLayout>
 
 
         <SeekBar
             android:id="@+id/settings_sb_extra"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:progress="2"
-            android:max="4"/>
+            android:max="6"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -342,7 +376,7 @@
     </LinearLayout>
 
     <!--save button-->
-        <Button
+    <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
