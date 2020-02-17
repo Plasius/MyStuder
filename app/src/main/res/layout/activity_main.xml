@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:columnCount="1"
-    android:rowCount="4"
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
-
-
 
 
         <LinearLayout
@@ -29,11 +26,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="fill_horizontal"
+                    android:layout_gravity="center"
                     android:layout_margin="50dp"
                     android:scaleX="1.5"
                     android:scaleY="1.5"
-                    android:text="Subjects"
+                    android:text="@string/subjects"
                     android:textSize="22sp"
                     android:drawableTop="@drawable/round_description_black_48"
                     android:textAlignment="center"
@@ -43,11 +40,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
+                android:layout_gravity="center"
                 android:layout_margin="50dp"
                 android:scaleX="1.5"
                 android:scaleY="1.5"
-                android:text="Timetable"
+                android:text="@string/timetable"
                 android:textSize="22sp"
                 android:drawableTop="@drawable/round_access_time_black_48"
                 android:textAlignment="center"
@@ -57,17 +54,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"
+                android:layout_gravity="center"
                 android:onClick="onProfileClicked"
                 android:layout_margin="50dp"
                 android:scaleX="1.5"
                 android:scaleY="1.5"
-                android:text="My Profile"
+                android:text="@string/my_profile"
                 android:textSize="22sp"
                 android:drawableTop="@drawable/round_account_circle_black_48"
                 android:textAlignment="center"/>
-
-
         </LinearLayout>
-
-</RelativeLayout>
+</ScrollView>

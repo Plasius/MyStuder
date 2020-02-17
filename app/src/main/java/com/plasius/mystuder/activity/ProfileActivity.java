@@ -2,6 +2,7 @@ package com.plasius.mystuder.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,7 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        getSupportActionBar().setTitle("Profile analyser");
+        getSupportActionBar().setTitle(R.string.my_profile);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         averageActual = findViewById(R.id.profile_tv_average);
@@ -437,29 +438,29 @@ public class ProfileActivity extends AppCompatActivity {
         //absences
         ((TextView)findViewById(R.id.profile_tv_absences)).setText(Integer.toString(user.getAbsences()));
         if(user.getAbsences()>20){
-            ((TextView)findViewById(R.id.profile_tv_absences_detail)).setText("You have too many absences!");
+            ((TextView)findViewById(R.id.profile_tv_absences_detail)).setText(R.string.overload_absences);
         }else{
-            ((TextView)findViewById(R.id.profile_tv_absences_detail)).setText("You are doing good!");
+            ((TextView)findViewById(R.id.profile_tv_absences_detail)).setText(R.string.doing_good);
         }
 
         //extra
         ((TextView)findViewById(R.id.profile_tv_extra)).setText(Integer.toString(user.getExtraDays()));
         if(user.getExtraDays()>4){
-            ((TextView)findViewById(R.id.profile_tv_extra_detail)).setText("You have an overwhelming amount of activities!");
+            ((TextView)findViewById(R.id.profile_tv_extra_detail)).setText(R.string.overload_activities);
         }else{
-            ((TextView)findViewById(R.id.profile_tv_extra_detail)).setText("Currently, you are under the threshold.");
+            ((TextView)findViewById(R.id.profile_tv_extra_detail)).setText(R.string.under_treshold);
         }
 
         //studytime
-        ((TextView)findViewById(R.id.profile_tv_studytime)).setText(Integer.toString(user.getStudyTime()));
+        ((TextView)findViewById(R.id.profile_tv_studytime)).setText(Integer.toString(user.getStudyTime()/60));
         if(user.getStudyTime()<=60){
-            ((TextView)findViewById(R.id.profile_tv_studytime_detail)).setText("Currently, you are underperforming.");
+            ((TextView)findViewById(R.id.profile_tv_studytime_detail)).setText(R.string.underperforming);
 
         }else if(user.getStudyTime()<=120){
-            ((TextView)findViewById(R.id.profile_tv_studytime_detail)).setText("You are putting in a moderate amount of work.");
+            ((TextView)findViewById(R.id.profile_tv_studytime_detail)).setText(R.string.moderate_work);
 
         }else{
-            ((TextView)findViewById(R.id.profile_tv_studytime_detail)).setText("You are investing a lot of time into this! Good job.");
+            ((TextView)findViewById(R.id.profile_tv_studytime_detail)).setText(R.string.good_investment);
 
         }
 

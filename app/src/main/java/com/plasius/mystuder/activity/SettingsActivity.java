@@ -23,22 +23,27 @@ public class SettingsActivity extends AppCompatActivity {
     EditText lastAverage;
     EditText averageGoal;
     RadioGroup gender, grade, profile;
-    SeekBar importance, extra, studytime;
+    SeekBar importance1, importance2, importance3, importance4, importance5, importance6, extra, studytime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        getSupportActionBar().setTitle("Profile builder");
+        getSupportActionBar().setTitle(R.string.settings);
 
         //display adequate welcoming message
         if(PersistenceUtils.getInstance(this).getBoolean(Constants.STATE_FIRST_LAUNCHED, true)){
             ((TextView)findViewById(R.id.settings_tv_welcome)).setText(R.string.welcome);
         }else{
-            ((TextView)findViewById(R.id.settings_tv_welcome)).setText(R.string.settings);
+            ((TextView)findViewById(R.id.settings_tv_welcome)).setText(R.string.edit_profile);
         }
 
-        importance = findViewById(R.id.settings_sb_importance);
+        importance1 = findViewById(R.id.settings_sb_importance1);
+        importance2 = findViewById(R.id.settings_sb_importance2);
+        importance3 = findViewById(R.id.settings_sb_importance3);
+        importance4 = findViewById(R.id.settings_sb_importance4);
+        importance5 = findViewById(R.id.settings_sb_importance5);
+        importance6 = findViewById(R.id.settings_sb_importance6);
         extra = findViewById(R.id.settings_sb_extra);
 
         gender = findViewById(R.id.settings_rg_gender);
@@ -72,11 +77,96 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
 
-        TextView importanceTracker = findViewById(R.id.settings_tv_tracker_importance);
-        importance.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        TextView importanceTracker1 = findViewById(R.id.settings_tv_tracker_importance1);
+        importance1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                importanceTracker.setText(Integer.toString(progress+1));
+                importanceTracker1.setText(Integer.toString(progress+1));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        TextView importanceTracker2 = findViewById(R.id.settings_tv_tracker_importance2);
+        importance2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                importanceTracker2.setText(Integer.toString(progress+1));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        TextView importanceTracker3 = findViewById(R.id.settings_tv_tracker_importance3);
+        importance3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                importanceTracker3.setText(Integer.toString(progress+1));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        TextView importanceTracker4 = findViewById(R.id.settings_tv_tracker_importance4);
+        importance4.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                importanceTracker4.setText(Integer.toString(progress+1));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        TextView importanceTracker5 = findViewById(R.id.settings_tv_tracker_importance5);
+        importance5.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                importanceTracker5.setText(Integer.toString(progress+1));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        TextView importanceTracker6 = findViewById(R.id.settings_tv_tracker_importance6);
+        importance6.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                importanceTracker6.setText(Integer.toString(progress+1));
             }
 
             @Override
@@ -119,70 +209,78 @@ public class SettingsActivity extends AppCompatActivity {
                 if(grade.getCheckedRadioButtonId()!=-1){
                     if(profile.getCheckedRadioButtonId()!=-1) {
                         if(checkEditText(lastAverage, 0, 10)){
-                                            if(checkEditText(averageGoal, 0, 10)){
-                                                if (checkEditText(absences, 0, 75)) {
-                                                    //save all user data
-                                                    User user = new User(name.getText().toString());
+                            if(checkEditText(averageGoal, 0, 10)){
+                                if (checkEditText(absences, 0, 75)) {
+                                    //save all user data
+                                    User user = new User(name.getText().toString());
 
-                                                    user.setLaverage(Double.parseDouble(lastAverage.getText().toString()));
-                                                    user.setGoal(Double.parseDouble(averageGoal.getText().toString()));
-                                                    
-                                                    user.setImportance(importance.getProgress() + 1);
-                                                    user.setStudyTime((studytime.getProgress()+1)*60);
+                                    user.setLaverage(Double.parseDouble(lastAverage.getText().toString()));
+                                    user.setGoal(Double.parseDouble(averageGoal.getText().toString()));
 
-                                                    switch (gender.getCheckedRadioButtonId()) {
-                                                        case R.id.settings_rb_man:
-                                                            user.setGender(1);
-                                                            break;
-                                                        case R.id.settings_rb_woman:
-                                                            user.setGender(2);
-                                                            break;
-                                                    }
+                                    user.setImportance(
+                                            (importance1.getProgress() + 1
+                                    + importance2.getProgress() + 1
+                                    + importance3.getProgress() + 1
+                                    + importance4.getProgress() + 1
+                                    + importance5.getProgress() + 1
+                                    + importance6.getProgress() + 1)/6
+                                    );
 
-                                                    switch (grade.getCheckedRadioButtonId()) {
-                                                        case R.id.settings_rb_nine:
-                                                            user.setGrade(9);
-                                                            break;
-                                                        case R.id.settings_rb_ten:
-                                                            user.setGrade(10);
-                                                            break;
-                                                        case R.id.settings_rb_eleven:
-                                                            user.setGrade(11);
-                                                            break;
-                                                        case R.id.settings_rb_twelve:
-                                                            user.setGrade(12);
-                                                            Toast.makeText(this, "run", Toast.LENGTH_SHORT).show();
-                                                            break;
-                                                    }
+                                    user.setStudyTime((studytime.getProgress()+1)*60);
 
-                                                    switch (profile.getCheckedRadioButtonId()) {
-                                                        case R.id.settings_rb_human:
-                                                            user.setProfile(2);
-                                                            break;
-                                                        case R.id.settings_rb_real:
-                                                            user.setProfile(1);
-                                                            break;
-                                                    }
+                                    switch (gender.getCheckedRadioButtonId()) {
+                                        case R.id.settings_rb_man:
+                                            user.setGender(1);
+                                            break;
+                                        case R.id.settings_rb_woman:
+                                            user.setGender(2);
+                                            break;
+                                    }
 
-                                                    user.setAbsences(Integer.parseInt(absences.getText().toString()));
-                                                    user.setExtraDays(extra.getProgress()+1);
+                                    switch (grade.getCheckedRadioButtonId()) {
+                                        case R.id.settings_rb_nine:
+                                            user.setGrade(9);
+                                            break;
+                                        case R.id.settings_rb_ten:
+                                            user.setGrade(10);
+                                            break;
+                                        case R.id.settings_rb_eleven:
+                                            user.setGrade(11);
+                                            break;
+                                        case R.id.settings_rb_twelve:
+                                            user.setGrade(12);
+                                            Toast.makeText(this, "run", Toast.LENGTH_SHORT).show();
+                                            break;
+                                    }
+
+                                    switch (profile.getCheckedRadioButtonId()) {
+                                        case R.id.settings_rb_human:
+                                            user.setProfile(2);
+                                            break;
+                                        case R.id.settings_rb_real:
+                                            user.setProfile(1);
+                                            break;
+                                    }
+
+                                    user.setAbsences(Integer.parseInt(absences.getText().toString()));
+                                    user.setExtraDays(extra.getProgress()+1);
 
 
-                                                    //go back or alternatively, launch main activity
-                                                    if (getIntent().getBooleanExtra(Constants.STATE_FIRST_LAUNCHED, true)) {
-                                                        PersistenceUtils.getInstance(this).setBoolean(Constants.STATE_FIRST_LAUNCHED, false);
-                                                        PersistenceUtils.getInstance(this).saveUser(user);
+                                    //go back or alternatively, launch main activity
+                                    if (getIntent().getBooleanExtra(Constants.STATE_FIRST_LAUNCHED, true)) {
+                                        PersistenceUtils.getInstance(this).setBoolean(Constants.STATE_FIRST_LAUNCHED, false);
+                                        PersistenceUtils.getInstance(this).saveUser(user);
 
-                                                        Intent intent = new Intent(this, MainActivity.class);
-                                                        startActivity(intent);
+                                        Intent intent = new Intent(this, MainActivity.class);
+                                        startActivity(intent);
 
-                                                    }
+                                    }
 
-                                                    finish();
-                                                }
-                                            }
+                                    finish();
+                                }
                             }
                         }
+                    }
 
                 }
             }

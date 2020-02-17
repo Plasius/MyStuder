@@ -239,6 +239,7 @@
         android:orientation="vertical"
         >
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -269,17 +270,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1 hour"/>
+                android:text="@string/one_hour"/>
             <TextView
                 android:layout_alignParentEnd="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3+ hours"/>
+                android:text="@string/three_or_more_hours"/>
         </RelativeLayout>
 
     </LinearLayout>
 
-    <!-- importance level -->
+    <!-- importance level1 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -287,17 +288,18 @@
         android:orientation="vertical"
         >
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="@string/importance"
+                android:text="@string/importance1"
                 android:textSize="22sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <TextView
-                android:id="@+id/settings_tv_tracker_importance"
+                android:id="@+id/settings_tv_tracker_importance1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="22sp"/>
@@ -307,7 +309,7 @@
 
 
         <SeekBar
-            android:id="@+id/settings_sb_importance"
+            android:id="@+id/settings_sb_importance1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:max="4"/>
@@ -318,12 +320,256 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="non-important"/>
+                android:text="@string/non_important"/>
             <TextView
                 android:layout_alignParentEnd="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="important"/>
+                android:text="@string/important"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- importance level2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/importance2"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/settings_tv_tracker_importance2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"/>
+
+
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/settings_sb_importance2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="4"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_important"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/important"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- importance level3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/importance3"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/settings_tv_tracker_importance3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"/>
+
+
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/settings_sb_importance3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="4"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_important"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/important"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- importance level4 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/importance4"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/settings_tv_tracker_importance4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"/>
+
+
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/settings_sb_importance4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="4"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_important"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/important"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- importance level5 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/importance5"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/settings_tv_tracker_importance5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"/>
+
+
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/settings_sb_importance5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="4"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_important"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/important"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- importance level6 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/importance6"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/settings_tv_tracker_importance6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"/>
+        </LinearLayout>
+
+
+        <SeekBar
+            android:id="@+id/settings_sb_importance6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="4"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_important"/>
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/important"/>
         </RelativeLayout>
 
     </LinearLayout>
@@ -336,6 +582,7 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -365,12 +612,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1 extra per week"/>
+                android:text="@string/one_extra_per_week"/>
             <TextView
                 android:layout_alignParentEnd="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7 extras per week"/>
+                android:text="@string/seven_extra_per_week"/>
         </RelativeLayout>
 
     </LinearLayout>

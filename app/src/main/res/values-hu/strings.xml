@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">MyStuder</string>
+    <string name="welcome">Üdvözlet a MyStuder-ben. Regisztráld a profilod.</string>
+    <string name="edit_profile">Profil szerkesztése</string>
+    <string name="man">férfi</string>
+    <string name="woman">nő</string>
+    <string name="gender">nem:</string>
+    <string name="grade">évfolyam:</string>
+    <string name="profile">profil:</string>
+    <string name="human">humán</string>
+    <string name="real">reál</string>
+    <string name="energy">energia</string>
+    <string name="calm">nyugodt</string>
+    <string name="balanced">kiegyensúlyozott</string>
+    <string name="turbulent">turbulens</string>
+    <string name="hours_slept">alvási idő:</string>
+    <string name="absences">hiányzások:</string>
+    <string name="seven">7</string>
+    <string name="minutes_school">távolság iskolától:</string>
+    <string name="motivation">motiváció szint:</string>
+    <string name="parent_influence">tanulás fontossága a szülőknek:</string>
+    <string name="days_extra">iskolán kivüli tevékenységek:</string>
+    <string name="name">név:</string>
+    <string name="Alexander">Andris</string>
+    <string name="save">mentés</string>
+    <string name="choose_category">Tantárgy választása</string>
+    <string name="delete_subject">Tantárgy törlése</string>
+    <string name="delete_grades">Összes törlése</string>
+    <string name="importance1">mennyire fontos számodra a tanulás?</string>
+    <string name="importance2">mennyire vagy motivált tanulni?</string>
+    <string name="importance3">mennyire viselnek meg a kudarcok a tanulásban?</string>
+    <string name="importance4">mennyire fontos a tanulási teljesitményed szüleidnek?</string>
+    <string name="importance5">mennyire viselnek meg a rossz jegyek?</string>
+    <string name="importance6">milyen könnyedséggel éred el tanulási céjaidat?</string>
+    <string name="study_time">tanulási idő:</string>
+    <string name="delete_classes">órák törlése</string>
+    <string name="choose_day">nap választása</string>
+    <string name="loading">töltés folyamatban</string>
+
+    <string name="last_under">Tavaly jobb kellett volna legyél, legalább: </string>
+    <string name="last_average">Rendben! Ez az érték körül kell lenned:</string>
+    <string name="last_top">Nagyon jó!</string>
+
+    <string name="goal_under">Egy kicsivel erősebb célod kéne legyen. Ajánlott:</string>
+    <string name="goal_average">A célod átlagos, ha a kiváló akarsz lenni, tüzd ki ezt:</string>
+    <string name="goal_top">Kiváló cél!</string>
+
+    <string name="current_under">A kitüzött célod nincs elérve.</string>
+    <string name="current_average">Jól haladsz a célod fele.</string>
+    <string name="current_top">Túl jó a teljesitményed, változtass a kitüzött célodon.</string>
+
+
+
+    <string name="average">átlag:</string>
+    <string name="real_average">reál átlag:</string>
+    <string name="human_average">humán átlag:</string>
+    <string name="last_year">múlt év</string>
+    <string name="this_year">idén</string>
+    <string name="average_last">utolsó átlag:</string>
+    <string name="average_now">mostani átlag cél:</string>
+    <string name="goal">cél:</string>
+
+    <string-array name="days">
+        <item>Hétfő</item>
+        <item>Kedd</item>
+        <item>Szerda</item>
+        <item>Csütörtök</item>
+        <item>Péntek</item>
+    </string-array>
+
+    <string-array name="evaluations">
+        <item>Ajajj… Az eredményeid az átlag alatt vannak másokhoz viszonyitva, legalább ennyi kellett volna: </item>
+        <item>Rendben állsz, másokkal megegyező a teljesitményed, mégpedig: </item>
+        <item>Kitűnő! A diáktársaid fölött vagy eredményeid alapján, akik ennyire teljesitettek: </item>
+    </string-array>
+    <string name="non_important">1-nem fontos</string>
+    <string name="important">5-fontos</string>
+    <string name="one_extra_per_week">1 vagy kevesebb</string>
+    <string name="one_hour">1 óra</string>
+    <string name="seven_extra_per_week">7 vagy több</string>
+    <string name="three_or_more_hours">3+ óra</string>
+    <string name="settings">Beállitások</string>
+    <string name="my_profile">Profil</string>
+    <string name="subjects">Tantárgyak</string>
+    <string name="timetable">Órarend</string>
+    <string name="average_current">pillanatnyi átlag:</string>
+    <string name="time_spent_studying">órák tanulással eltöltve:</string>
+    <string name="doing_good">Jól állsz!</string>
+    <string name="good_investment">Rengeteg időt fektetsz be, gratula!</string>
+    <string name="moderate_work">Megfelelő időt fektetsz be.</string>
+    <string name="overload_absences">Túl sok a hiányzásod!</string>
+    <string name="overload_activities">Túl sok extra programod van!</string>
+    <string name="under_treshold">Nem léped túl a határt.</string>
+    <string name="underperforming">Nem teljesitesz megfelelőképp!</string>
+</resources>

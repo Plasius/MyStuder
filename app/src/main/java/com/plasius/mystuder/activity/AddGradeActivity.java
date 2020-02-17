@@ -42,6 +42,10 @@ public class AddGradeActivity extends AppCompatActivity {
             return;
         int value = Integer.parseInt(((EditText)findViewById(R.id.grades_et_grade)).getText().toString());
 
+        if(value<1 || value >10){
+            Toast.makeText(this, "Sorry, that's not a valid entry.", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         DatePicker datePicker = findViewById(R.id.grades_dp_date);
         Calendar calendar = Calendar.getInstance();

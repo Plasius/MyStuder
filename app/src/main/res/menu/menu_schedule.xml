@@ -8,5 +8,5 @@
         android:id="@+id/action_add_class"
         android:orderInCategory="1"
         android:title="Add class"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>

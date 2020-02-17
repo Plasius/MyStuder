@@ -37,6 +37,11 @@ public class AddSubjectActivity extends AppCompatActivity {
         double gaverage = Double.parseDouble(((EditText)findViewById(R.id.subject_et_goal)).getText().toString());
         boolean isReal = ((CheckBox)findViewById(R.id.subject_cb_real)).isChecked();
 
+        if(laverage<0 || laverage>10 || gaverage<1 || gaverage>10){
+            Toast.makeText(this, "Please provide accurate values.", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         //save new subject
         Database.getInstance(this).subjectDAO().insertSubject(new Subject(subjectname, laverage, gaverage, isReal));
 
