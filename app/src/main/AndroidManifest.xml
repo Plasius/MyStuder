@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.plasius.mystuder">
+    package="com.tudok.mystuder">
 
     <application
         android:allowBackup="true"
@@ -9,47 +9,47 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.ProfileActivity">
+        <activity android:name="com.tudok.mystuder.activity.ProfileActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
+                android:value="com.tudok.mystuder.activity.MainActivity" />
         </activity>
-        <activity android:name=".activity.AddClassActivity">
+        <activity android:name="com.tudok.mystuder.activity.AddClassActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.ScheduleActivity" />
+                android:value="com.tudok.mystuder.activity.ScheduleActivity" />
         </activity>
-        <activity android:name=".activity.ScheduleActivity">
+        <activity android:name="com.tudok.mystuder.activity.ScheduleActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
+                android:value="com.tudok.mystuder.activity.MainActivity" />
         </activity>
-        <activity android:name=".activity.MainActivity">
+        <activity android:name="com.tudok.mystuder.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.SettingsActivity" />
-        <activity android:name=".activity.AddGradeActivity">
+        <activity android:name="com.tudok.mystuder.activity.SettingsActivity" />
+        <activity android:name="com.tudok.mystuder.activity.AddGradeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.SubjectsActivity" />
+                android:value="com.tudok.mystuder.activity.SubjectsActivity" />
         </activity>
-        <activity android:name=".activity.AddSubjectActivity">
+        <activity android:name="com.tudok.mystuder.activity.AddSubjectActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.SubjectsActivity" />
+                android:value="com.tudok.mystuder.activity.SubjectsActivity" />
         </activity>
-        <activity android:name=".activity.SubjectsActivity">
+        <activity android:name="com.tudok.mystuder.activity.SubjectsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
+                android:value="com.tudok.mystuder.activity.MainActivity" />
         </activity>
 
 
-        <receiver android:name=".notification.BootReceiver"
+        <receiver android:name="com.tudok.mystuder.notification.BootReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -58,10 +58,10 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".notification.NotificationReceiver"/>
+        <receiver android:name="com.tudok.mystuder.notification.NotificationReceiver"/>
 
         <service
-            android:name=".notification.MyService"
+            android:name="com.tudok.mystuder.notification.MyService"
             android:enabled="true"
             android:exported="true"></service>
 

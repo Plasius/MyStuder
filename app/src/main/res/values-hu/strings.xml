@@ -14,12 +14,12 @@
     <string name="balanced">kiegyensúlyozott</string>
     <string name="turbulent">turbulens</string>
     <string name="hours_slept">alvási idő:</string>
-    <string name="absences">hiányzások:</string>
+    <string name="absences">hiányzások az évben:</string>
     <string name="seven">7</string>
     <string name="minutes_school">távolság iskolától:</string>
     <string name="motivation">motiváció szint:</string>
     <string name="parent_influence">tanulás fontossága a szülőknek:</string>
-    <string name="days_extra">iskolán kivüli tevékenységek:</string>
+    <string name="days_extra">iskolán kivüli tevékenységek hetente:</string>
     <string name="name">név:</string>
     <string name="Alexander">Andris</string>
     <string name="save">mentés</string>
@@ -31,8 +31,8 @@
     <string name="importance3">mennyire viselnek meg a kudarcok a tanulásban?</string>
     <string name="importance4">mennyire fontos a tanulási teljesitményed szüleidnek?</string>
     <string name="importance5">mennyire viselnek meg a rossz jegyek?</string>
-    <string name="importance6">milyen könnyedséggel éred el tanulási céjaidat?</string>
-    <string name="study_time">tanulási idő:</string>
+    <string name="importance6">könnyen éred el tanulási céjaidat?</string>
+    <string name="study_time">tanulással eltöltött orák hetente:</string>
     <string name="delete_classes">órák törlése</string>
     <string name="choose_day">nap választása</string>
     <string name="loading">töltés folyamatban</string>
@@ -56,8 +56,8 @@
     <string name="human_average">humán átlag:</string>
     <string name="last_year">múlt év</string>
     <string name="this_year">idén</string>
-    <string name="average_last">utolsó átlag:</string>
-    <string name="average_now">mostani átlag cél:</string>
+    <string name="average_last">utolsó évi átlag:</string>
+    <string name="average_now">idéni átlag cél:</string>
     <string name="goal">cél:</string>
 
     <string-array name="days">
@@ -73,8 +73,8 @@
         <item>Rendben állsz, másokkal megegyező a teljesitményed, mégpedig: </item>
         <item>Kitűnő! A diáktársaid fölött vagy eredményeid alapján, akik ennyire teljesitettek: </item>
     </string-array>
-    <string name="non_important">1-nem fontos</string>
-    <string name="important">5-fontos</string>
+    <string name="non_important">1 - kevésbé</string>
+    <string name="important">5 - nagyon</string>
     <string name="one_extra_per_week">1 vagy kevesebb</string>
     <string name="one_hour">1 óra</string>
     <string name="seven_extra_per_week">7 vagy több</string>
@@ -92,4 +92,21 @@
     <string name="overload_activities">Túl sok extra programod van!</string>
     <string name="under_treshold">Nem léped túl a határt.</string>
     <string name="underperforming">Nem teljesitesz megfelelőképp!</string>
+    <string name="add_class">Óra hozzáadása</string>
+    <string name="all_days">összes nap</string>
+    <string name="sunday">vasárnap</string>
+    <string name="thursday">csütörtök</string>
+    <string name="tuesday">kedd</string>
+    <string name="wednesday">szerda</string>
+    <string name="monday">hétfő</string>
+    <string name="friday">péntek</string>
+    <string name="saturday">szombat</string>
+    <string name="tenthclass">10. óra</string>
+    <string name="select_order">Sorrend választása:</string>
+    <string name="nullthclass">0. óra</string>
+    <string name="day">nap:</string>
+    <string name="order">sorrend:</string>
+    <string name="subject">tantárgy:</string>
+    <string name="time">időpont:</string>
+    <string name="add">hozzáadás</string>
 </resources>

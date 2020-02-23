@@ -99,4 +99,21 @@
     <string name="underperforming">Currently, you are underperforming.</string>
     <string name="moderate_work">You are putting in a moderate amount of work.</string>
     <string name="good_investment">You are investing a lot of time into this! Good job.</string>
+    <string name="add_class">Add class</string>
+    <string name="all_days">all days</string>
+    <string name="sunday">sunday</string>
+    <string name="monday">monday</string>
+    <string name="tuesday">tuesday</string>
+    <string name="wednesday">wednesday</string>
+    <string name="thursday">thursday</string>
+    <string name="friday">friday</string>
+    <string name="saturday">saturday</string>
+    <string name="select_order">Select order:</string>
+    <string name="nullthclass">0th class</string>
+    <string name="tenthclass">10th class</string>
+    <string name="day">day:</string>
+    <string name="subject">subject:</string>
+    <string name="order">order:</string>
+    <string name="time">time:</string>
+    <string name="add">add</string>
 </resources>
