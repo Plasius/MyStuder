@@ -109,4 +109,15 @@
     <string name="subject">tantárgy:</string>
     <string name="time">időpont:</string>
     <string name="add">hozzáadás</string>
+    <string name="add_grade">Jegy hozzáadása</string>
+    <string name="add_subject">Tantárgy hozzáadása</string>
+    <string name="all_subjects">minden tantárgy</string>
+    <string name="last_year_s_average">múlt évi átlag</string>
+    <string name="real_subject">reál tantárgy</string>
+    <string name="subject_name">tantárgy név</string>
+    <string name="this_year_s_goal">idéni átlagcél</string>
+    <string name="note">jegy</string>
+    <string name="subject_added">Tantárgy hozzáadva</string>
+    <string name="error_values">Az adatok hibásak.</string>
+    <string name="grade_added">Jegy hozzáadva</string>
 </resources>

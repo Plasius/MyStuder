@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="15dp"
     tools:context=".activity.AddSubjectActivity"
     >
 
@@ -21,7 +22,7 @@
         android:layout_height="wrap_content"
         android:textSize="22sp"
         android:inputType="text"
-        android:hint="subject name"
+        android:hint="@string/subject_name"
         />
 
 
@@ -32,7 +33,7 @@
         android:inputType="numberDecimal"
         android:maxLength="4"
         android:textSize="22sp"
-        android:hint="last year's average"
+        android:hint="@string/last_year_s_average"
         />
 
     <EditText
@@ -42,19 +43,19 @@
         android:inputType="numberDecimal"
         android:maxLength="4"
         android:textSize="22sp"
-        android:hint="this year's goal"
+        android:hint="@string/this_year_s_goal"
         />
     <CheckBox
         android:id="@+id/subject_cb_real"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Real subject"/>
+        android:text="@string/real_subject"/>
 
     <Button
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onAddClicked"
-        android:text="add"/>
+        android:text="@string/add"/>
 </LinearLayout>
 </ScrollView>

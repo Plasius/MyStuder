@@ -43,7 +43,7 @@ public class AddGradeActivity extends AppCompatActivity {
         int value = Integer.parseInt(((EditText)findViewById(R.id.grades_et_grade)).getText().toString());
 
         if(value<1 || value >10){
-            Toast.makeText(this, "Sorry, that's not a valid entry.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_values), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -56,7 +56,7 @@ public class AddGradeActivity extends AppCompatActivity {
         Database.getInstance(this).gradeDAO().insertGrade(new Grade(subjectName, date.getTime(), value));
 
         //go back
-        Toast.makeText(this, "Grade added", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.grade_added), Toast.LENGTH_SHORT).show();
         finish();
     }
 

@@ -13,6 +13,10 @@ import com.tudok.mystuder.database.Database;
 import com.tudok.mystuder.database.Subject;
 
 public class AddSubjectActivity extends AppCompatActivity {
+    EditText et_subjectName;
+    EditText et_lastAverage;
+    EditText et_goalAverage;
+    CheckBox cb_isReal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +25,10 @@ public class AddSubjectActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Add Subject");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //get subjects from db
-        //display subjects
+        et_subjectName = findViewById(R.id.subject_et_name);
+        et_lastAverage = findViewById(R.id.subject_et_laverage);
+        et_goalAverage = findViewById(R.id.subject_et_goal);
+        cb_isReal = findViewById(R.id.subject_cb_real);
 
     }
 
@@ -32,13 +38,18 @@ public class AddSubjectActivity extends AppCompatActivity {
     }
 
     public void onAddClicked(View v){
+        if(et_subjectName.getText().toString().isEmpty() || et_lastAverage.getText().toString().isEmpty() ||et_goalAverage.getText().toString().isEmpty()){
+            Toast.makeText(this, getString(R.string.error_values), Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         String subjectname = ((EditText)findViewById(R.id.subject_et_name)).getText().toString();
         double laverage = Double.parseDouble(((EditText)findViewById(R.id.subject_et_laverage)).getText().toString());
         double gaverage = Double.parseDouble(((EditText)findViewById(R.id.subject_et_goal)).getText().toString());
         boolean isReal = ((CheckBox)findViewById(R.id.subject_cb_real)).isChecked();
 
         if(laverage<0 || laverage>10 || gaverage<1 || gaverage>10){
-            Toast.makeText(this, "Please provide accurate values.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.error_values), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -46,7 +57,7 @@ public class AddSubjectActivity extends AppCompatActivity {
         Database.getInstance(this).subjectDAO().insertSubject(new Subject(subjectname, laverage, gaverage, isReal));
 
         //go back
-        Toast.makeText(this, "Subject added", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.subject_added), Toast.LENGTH_SHORT).show();
         finish();
     }
 

@@ -116,4 +116,15 @@
     <string name="order">order:</string>
     <string name="time">time:</string>
     <string name="add">add</string>
+    <string name="add_grade">Add grade</string>
+    <string name="add_subject">Add subject</string>
+    <string name="all_subjects">all subjects</string>
+    <string name="real_subject">Real subject</string>
+    <string name="this_year_s_goal">this year\'s goal</string>
+    <string name="last_year_s_average">last year\'s average</string>
+    <string name="subject_name">subject name</string>
+    <string name="note">grade</string>
+    <string name="error_values">Please provide accurate values.</string>
+    <string name="subject_added">Subject added</string>
+    <string name="grade_added">Grade added</string>
 </resources>

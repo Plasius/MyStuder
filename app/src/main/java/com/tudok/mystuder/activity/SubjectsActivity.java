@@ -3,6 +3,7 @@ package com.tudok.mystuder.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -36,7 +37,7 @@ public class SubjectsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Subjects");
+        getSupportActionBar().setTitle(getString(R.string.subjects));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_subjects);
         initSpinner();
@@ -49,7 +50,7 @@ public class SubjectsActivity extends AppCompatActivity {
 
     //after a subject is selected, the list of grades needs to be created
     public void loadSubject(String Id){
-        List<Grade> grades = Id.contentEquals("all subjects") ? Database.getInstance(this).gradeDAO().getGrades() : Database.getInstance(this).gradeDAO().getGradesBySubject(Id);
+        List<Grade> grades = Id.contentEquals(getString(R.string.all_subjects)) ? Database.getInstance(this).gradeDAO().getGrades() : Database.getInstance(this).gradeDAO().getGradesBySubject(Id);
 
         //create adapter and bind to listview
         GradeAdapter adapter=new GradeAdapter(this, grades);
@@ -71,7 +72,7 @@ public class SubjectsActivity extends AppCompatActivity {
         if(grades.size()!=0)
             average/=grades.size();
 
-        if(Id.contentEquals("all subjects")){
+        if(Id.contentEquals(getString(R.string.all_subjects))){
             User user = PersistenceUtils.getInstance(this).getUser();
             if(user != null) {
                 ((TextView) findViewById(R.id.subject_tv_laverage)).setText(String.format("%.2f", average));
@@ -119,7 +120,7 @@ public class SubjectsActivity extends AppCompatActivity {
             }
         );
 
-        list.add(0, "all subjects");
+        list.add(0, getString(R.string.all_subjects));
 
         ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, list);
